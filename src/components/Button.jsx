@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaHeart } from "react-icons/fa";
 
-function Button({ children, selected, type }) {
+function Button({ children, selected, style }) {
     const styles = {
         primary: "w-fit px-[20px] py-[8px] rounded-[25px] text-orange-600 font-secondary border-orange-600 border-2 cursor-pointer hover:bg-orange-600 hover:text-white transition duration-400 transition-transform:transform hover:translate-y-[-2px] leading-normal",
         secondary: "w-fit text-white font-secondary text-sm  bg-orange-600 flex justify-center items-center py-[10px] px-[15px] gap-1 rounded-sm cursor-pointer hover:scale-103 transition duration-300",
@@ -9,8 +9,8 @@ function Button({ children, selected, type }) {
     }
 
     return (
-        <div className={styles[type]}>
-            {type === "secondary" ? <>
+        <div className={styles[style]}>
+            {style === "secondary" ? <>
                 <FaHeart />{children}
             </> : children}
         </div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { IoClose } from "react-icons/io5";
 import Label from './Label';
-import Button2 from './Button2';
 import Button from './Button';
 
 
