@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route element={<AppLayout />}>
           <Route path='' element={<HomePage />} />
-          <Route path='login' element={<Login />} />
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
           <Route path='interior' element={<Interior />} />
