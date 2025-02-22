@@ -6,12 +6,14 @@ import Slider from 'react-slick'
 import SimpleSlider from '../components/SimpleSlider'
 import MenuBlock from '../components/MenuBlock'
 import Button from '../components/Button'
+import { Link } from 'react-router-dom'
 
 function HomePage() {
   return (
     <div>
       <SimpleSlider />
       <MenuBlock />
+      <Link to="login">Login</Link>
     </div>
   )
 }
