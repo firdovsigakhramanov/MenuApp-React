@@ -19,7 +19,6 @@ function App() {
           <Route path='interior' element={<Interior />} />
         </Route>
         <Route path='login' element={<Login />} />
-
       </Routes>
     </BrowserRouter>
   )

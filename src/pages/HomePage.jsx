@@ -13,7 +13,6 @@ function HomePage() {
     <div>
       <SimpleSlider />
       <MenuBlock />
-      <Link to="login">Login</Link>
     </div>
   )
 }

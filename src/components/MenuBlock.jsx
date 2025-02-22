@@ -4,9 +4,10 @@ import CategoryBlock from './CategoryBlock'
 import MenuList from './MenuList'
 import ProductDeatils from './ProductDeatils'
 
+
 function MenuBlock() {
     return (
-        <div className='mt-[70px] px-[5%] mx-auto'>
+        <div className='mt-[70px] mx-auto'>
             <SectionTitle>Menyumuz</SectionTitle>
             <CategoryBlock />
             <MenuList />
