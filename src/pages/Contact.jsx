@@ -18,7 +18,7 @@ function Contact() {
                     <ContactLabel content="info@menu.az"><IoMdMailOpen className='text-xl' /></ContactLabel>
                     <ContactLabel content="Baku, Azərbaycan"><FaLocationDot className='text-xl' /></ContactLabel>
                 </div>
-                <div className='flex'>
+                <div className='flex gap-10 mt-14'>
                     <ContactForm/>
                     <Map/>
                 </div>
