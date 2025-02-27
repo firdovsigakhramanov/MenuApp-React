@@ -29,7 +29,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className='flex justify-center items-center pt-8'>
+      <div className='flex justify-center text-center items-center pt-8'>
         <p>© 2024 Ləzzət Durağı - Bütün Hüquqlar Qorunur</p>
       </div>
     </div>
