@@ -7,6 +7,8 @@ import './App.css'
 import Contact from './pages/Contact'
 import Interior from './pages/Interior'
 import AppLayout from './layouts/AppLayout'
+import Dashboard from './pages/Dashboard'
+import ErrorPage from './pages/ErrorPage'
 
 function App() {
   return (
@@ -17,8 +19,10 @@ function App() {
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
           <Route path='interior' element={<Interior />} />
+          <Route path="*" element={<ErrorPage />} />
         </Route>
         <Route path='login' element={<Login />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   )
