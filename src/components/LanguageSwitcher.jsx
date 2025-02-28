@@ -21,7 +21,8 @@ export default function LanguageSwitcher({ showMenu }) {
     };
     console.log(showMenu);
     return (
-        <div className={`sm:static  absolute bottom-[-230px] left-[5%] sm:inline-block ${showMenu ? "" : "hidden"}`}>
+        <div className={`sm:static  absolute left-[5%]  bottom-[-230px] transition-all duration-1000 ease-in-out 
+         sm:inline-block ${showMenu ? "translate-y-0" : "-translate-y-320 "}`}>
             <select
                 value={selectedLang}
                 onChange={(e) => changeLanguage(e.target.value)}
