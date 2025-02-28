@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaInfo } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
@@ -11,12 +11,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 
 function IconsBlock() {
+    const [showMenu, setShowMenu] = useState(false)
     return (
         <div className='text-orange-600 text-2xl flex items-center gap-5'>
-            <Menu/>
-            <GiHamburgerMenu className='cursor-pointer block lg:hidden' />
+            <Menu showMenu={showMenu}  />
+            <GiHamburgerMenu className='cursor-pointer block lg:hidden' onClick={() => setShowMenu(!showMenu)} />
             <Heart className='cursor-pointer ' />
-            <LanguageSwitcher />
+            <LanguageSwitcher showMenu={showMenu}  />
         </div>
     )
 }

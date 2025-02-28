@@ -6,7 +6,7 @@ const languages = [
     { code: "ru", label: "Русский" },
 ];
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ showMenu }) {
     const [selectedLang, setSelectedLang] = useState("az");
 
     useEffect(() => {
@@ -19,9 +19,9 @@ export default function LanguageSwitcher() {
         localStorage.setItem("siteLang", lang);
         window.location.reload(); // Dili dəyişdikdən sonra yenidən yüklə
     };
-
+    console.log(showMenu);
     return (
-        <div className="relative hidden sm:inline-block">
+        <div className={`sm:static  absolute bottom-[-230px] left-[5%] ${showMenu ? "" : "hidden"}`}>
             <select
                 value={selectedLang}
                 onChange={(e) => changeLanguage(e.target.value)}
@@ -29,7 +29,7 @@ export default function LanguageSwitcher() {
             >
                 {languages.map((lang) => (
                     <option key={lang.code} value={lang.code} className="cursor-pointer text-orange-950">
-                    {lang.label}
+                        {lang.label}
                     </option>
                 ))}
             </select>
