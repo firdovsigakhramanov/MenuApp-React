@@ -19,10 +19,10 @@ export default function LanguageSwitcher({ showMenu }) {
         localStorage.setItem("siteLang", lang);
         window.location.reload(); // Dili dəyişdikdən sonra yenidən yüklə
     };
-    console.log(showMenu);
     return (
-        <div className={`sm:static  absolute left-[5%]  bottom-[-230px] transition-all duration-1000 ease-in-out 
-         sm:inline-block ${showMenu ? "translate-y-0" : "-translate-y-320 "}`}>
+        <div className={` sm:static sm:translate-y-0 absolute  left-[5%]
+            sm:transition-none transition-translate duration-1000 ease-in-out
+         sm:inline-block ${showMenu ? "translate-y-62" : "-translate-y-320"}`}>
             <select
                 value={selectedLang}
                 onChange={(e) => changeLanguage(e.target.value)}

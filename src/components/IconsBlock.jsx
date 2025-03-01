@@ -16,7 +16,7 @@ function IconsBlock() {
         <div className='text-orange-600 text-2xl flex items-center gap-5'>
             <Menu showMenu={showMenu}  />
             <GiHamburgerMenu className='cursor-pointer block lg:hidden' onClick={() => setShowMenu(!showMenu)} />
-            <Heart className='cursor-pointer ' />
+            <Heart className='cursor-pointer'/>
             <LanguageSwitcher showMenu={showMenu}  />
         </div>
     )
