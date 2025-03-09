@@ -4,7 +4,7 @@ import SectionTitle from '../components/SectionTitle'
 function About() {
   return (
     <div className='px-[10%] text-justify pt-[25%] md:pt-[10%]  font-primary'>
-      <SectionTitle>Haqqımızda</SectionTitle>
+      <SectionTitle style="primary">Haqqımızda</SectionTitle>
       <div>
         Müasir restoran sistemi restoran biznesinin uğurunda mühüm rol oynayır. Getdikcə artan rəqabət və sürətlə dəyişən texnologiya ilə restoranların öz əməliyyatlarını asanlaşdırmaq və müştərilərinə daha yaxşı təcrübə təqdim etmək üçün müasir sistemləri mənimsəmələri vacibdir. Bu yazıda biz müasir restoran sisteminin ən vacib xüsusiyyətlərini araşdıracağıq.
 

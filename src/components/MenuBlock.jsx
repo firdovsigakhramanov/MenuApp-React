@@ -8,7 +8,7 @@ import ProductDeatils from './ProductDeatils'
 function MenuBlock() {
     return (
         <div className='mt-[70px] mx-auto'>
-            <SectionTitle>Menyumuz</SectionTitle>
+            <SectionTitle style="primary">Menyumuz</SectionTitle>
             <CategoryBlock />
             <MenuList />
             <ProductDeatils />

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @theme {
   --font-primary: "Poppins", "sans-serif";
-  --font-secondary: font-family: Arial, Helvetica, sans-serif;
+  --font-secondary: Arial, Helvetica, sans-serif;
 }
 
 /* CSS dosyanızda, kaydırma çubuğunu gizlemek için */

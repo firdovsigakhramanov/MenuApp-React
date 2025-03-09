@@ -1,8 +1,13 @@
 import React from 'react'
+import SectionTitle from '../../components/SectionTitle'
+import NewProductForm from '../components/NewProductForm'
 
 function NewProduct() {
   return (
-    <div>NewProduct</div>
+    <div>
+      <SectionTitle style="secondary">Yeni Məhsul Yarat</SectionTitle>
+      <NewProductForm/>
+    </div>
   )
 }
 

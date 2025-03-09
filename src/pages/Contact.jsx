@@ -11,7 +11,7 @@ import Map from '../components/Map';
 function Contact() {
     return (
         <div className='px-[10%] pt-[25%] md:pt-[10%] font-primary'>
-            <SectionTitle>Bizimlə Əlaqə</SectionTitle>
+            <SectionTitle style="primary">Bizimlə Əlaqə</SectionTitle>
             <div className='flex flex-col'>
                 <div className='flex justify-between'>
                     <ContactLabel content="(+99470) 536-98-09"><FaPhoneAlt className='text-xl' /></ContactLabel>
