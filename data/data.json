@@ -1,0 +1,96 @@
+{
+    "foods": [
+        {
+            "id": 1,
+            "name": "Pizza Margherita",
+            "price": 8.99,
+            "category": "Pizza",
+            "image": "https://anadolu.az/image/cache/data/Margarita-746x746.jpg",
+            "description": "Domates sosu, mozzarella peyniri ve fesleğen ile hazırlanır."
+        },
+        {
+            "id": 2,
+            "name": "Tavuk Döner Dürüm",
+            "price": 5.49,
+            "category": "Dürüm",
+            "image": "https://www.karaca.com/blog/wp-content/uploads/2023/02/tavuk-donerr.webp",
+            "description": "Lezzetli tavuk döner, lavaş ekmeğinde sarılı ve özel soslarla."
+        },
+        {
+            "id": 3,
+            "name": "Adana Kebap",
+            "price": 10.99,
+            "category": "Kebap",
+            "image": "https://cdn.culinarywonderland.com/photo/im/image0_l_663818.jpg",
+            "description": "Izgara kıyma kebabı, közlenmiş biber ve domates ile servis edilir."
+        },
+        {
+            "id": 4,
+            "name": "Lahmacun",
+            "price": 2.99,
+            "category": "Lahmacun",
+            "image": "https://cookingorgeous.com/wp-content/uploads/2021/11/homemade-turkish-lahmacun-recipe-26.jpg",
+            "description": "İncecik hamur, kıymalı harç ile taş fırında pişirilir."
+        },
+        {
+            "id": 5,
+            "name": "İskender Kebap",
+            "price": 12.99,
+            "category": "Kebap",
+            "image": "https://i.lezzet.com.tr/images-xxlarge-recipe/homemade-iskender-kebab-f33fcb75-16b0-46eb-b16c-c7d56512916d.jpg",
+            "description": "Tereyağı ve yoğurt ile sunulan döner kebap, özel iskender sosu ile."
+        },
+        {
+            "id": 6,
+            "name": "Sütlaç",
+            "price": 3.99,
+            "category": "Tatlı",
+            "image": "https://d17wu0fn6x6rgz.cloudfront.net/img/w/tarif/mgt/firinda-sutlac-cy5a3404-600.webp",
+            "description": "Fırında pişmiş geleneksel sütlü tatlı."
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "userName": "admin",
+            "password": "admin123",
+            "position": "admin"
+        },
+        {
+            "id": 2,
+            "userName": "fiko",
+            "password": "fiko123",
+            "position": "manager"
+        },
+        {
+            "id": 3,
+            "userName": "menu",
+            "password": "menu123",
+            "position": "staff"
+        },
+        {
+            "id": 4,
+            "userName": "julia",
+            "password": "menu123",
+            "position": "staff"
+        }
+    ],
+    "category": [
+        {
+            "id": 1,
+            "categoryName": "Şorbalar"
+        },
+        {
+            "id": 2,
+            "categoryName": "Qazan Yeməkləri"
+        },
+        {
+            "id": 3,
+            "categoryName": "Salatlar"
+        },
+        {
+            "id": 4,
+            "categoryName": "Kabablar"
+        }
+    ]
+}

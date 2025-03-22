@@ -10,7 +10,7 @@ function Dashboard() {
         <div>
             <TopBar />
 
-            <div className=' bg-gray-100 py-30 lg:px-[7%]  px-[5%] flex font-primary gap-8'>
+            <div className='bg-gray-100 min-h-dvh  py-30 lg:px-[7%]  px-[5%] flex font-primary gap-8'>
                 <Sidebar />
                 <div className=' pl-[30%] w-[100%] '>
                     <Outlet />

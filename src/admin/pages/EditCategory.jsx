@@ -7,16 +7,12 @@ import CardContainer from '../components/CardContainer'
 import CategoryCard from '../components/CategoryCard'
 import Button from '../../components/Button'
 import { PiPlusBold } from 'react-icons/pi'
+import { useFoods } from '../../context/MenuContext'
 
-const data = [
-  {
-    id: 1,
-    title: "Sorbalar",
-
-  }
-]
 
 function EditCategory() {
+  const { category } = useFoods()
+
   return (
     <div>
       <div className='flex items-center justify-between mb-10'>
@@ -24,11 +20,9 @@ function EditCategory() {
         <Button style="addButton" icon={<PiPlusBold />}>Kateqoriya Əlavə Et</Button>
       </div>
       <CardContainer>
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-        <CategoryCard />
-
+        {category.map(item => (
+          <CategoryCard key={item.id} category={item} />
+        ))}
       </CardContainer>
     </div>
   )

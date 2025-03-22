@@ -4,7 +4,7 @@ import { FaList } from "react-icons/fa6";
 import Button from '../../components/Button';
 
 
-function CategoryCard() {
+function CategoryCard({ category }) {
     return (
         <div className='flex flex-col items-center gap-3 rounded-[10px] w-[255px] bg-white p-6  shadow-[0_8px_20px_rgba(231,76,60,0.15)]
          transition duration-400 transition-transform:transform relative hover:-translate-y-1'
@@ -14,7 +14,7 @@ function CategoryCard() {
             >
                 <RiBowlFill />
             </div>
-            <h3 className='text-xl font-medium'>Sorbalar</h3>
+            <h3 className='text-xl font-medium'>{category.categoryName}</h3>
             <div className='flex gap-2 items-center text-gray-600'>
                 <div className='flex items-center gap-1'>
                     <FaList />

@@ -5,8 +5,11 @@ import Button from '../../components/Button'
 import { PiPlusBold } from "react-icons/pi";
 import Modal from '../../layouts/Modal';
 import NewProductForm from '../components/NewProductForm';
+import { useFoods } from '../../context/MenuContext';
 function MenuManage() {
   const [showModal, setShowModal] = useState(false)
+  const { foods } = useFoods()
+  console.log(foods);
   return (
     <div>
       {showModal &&
@@ -19,13 +22,9 @@ function MenuManage() {
         <Button onClick={() => { setShowModal(true) }} style="addButton" icon={<PiPlusBold />}>Məhsul Əlavə Et</Button>
       </div>
       <div className='flex flex-wrap gap-6'>
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
+        {foods.map(food => (
+          <FoodCard key={food.id} food={food} />
+        ))}
       </div>
     </div>
   )
