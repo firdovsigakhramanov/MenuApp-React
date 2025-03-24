@@ -1,7 +1,12 @@
 import React from 'react'
+import { useFoods } from '../context/MenuContext'
 
 function FoodCard({ food }) {
-    console.log(food)
+    const { setShowDetails, setFoodDetails } = useFoods()
+    function productClick() {
+        setShowDetails(true)
+        setFoodDetails(food)
+    }
     return (
         <div className='rounded-2xl overflow-hidden md:w-[262px] w-80  bg-white cursor-pointer shadow-[0_8px_20px_rgba(231,76,60,0.15)]
         transition duration-400 transition-transform:transform relative 
@@ -16,7 +21,7 @@ function FoodCard({ food }) {
                 </div>
                 <div className='flex justify-between items-center pt-2.5 pb-1'>
                     <div className='text-orange-600 font-bold md:text-[18px] text-[16px]'>$5.50 AZN</div>
-                    <div className='w-fit md:px-[12px] px-[10px] py-[3px] md:py-[4px] text-sm rounded-[25px] text-white 
+                    <div onClick={productClick} className='w-fit md:px-[12px] px-[10px] py-[3px] md:py-[4px] text-sm rounded-[25px] text-white 
         font-secondary border-orange-600 border-2 cursor-pointer leading-normal bg-orange-600 '>Ətraflı</div>
                 </div>
             </div>

@@ -9,7 +9,6 @@ import { useFoods } from '../../context/MenuContext';
 function MenuManage() {
   const [showModal, setShowModal] = useState(false)
   const { foods } = useFoods()
-  console.log(foods);
   return (
     <div>
       {showModal &&

@@ -77,6 +77,10 @@
     ],
     "category": [
         {
+            "id": 0,
+            "categoryName": "Hamısı"
+        },
+        {
             "id": 1,
             "categoryName": "Şorbalar"
         },
@@ -91,6 +95,40 @@
         {
             "id": 4,
             "categoryName": "Kabablar"
+        }
+    ],
+    "favorites": [
+        {
+            "id": 2,
+            "name": "Tavuk Döner Dürüm",
+            "price": 5.49,
+            "category": "Dürüm",
+            "image": "https://www.karaca.com/blog/wp-content/uploads/2023/02/tavuk-donerr.webp",
+            "description": "Lezzetli tavuk döner, lavaş ekmeğinde sarılı ve özel soslarla."
+        },
+        {
+            "id": 3,
+            "name": "Adana Kebap",
+            "price": 10.99,
+            "category": "Kebap",
+            "image": "https://cdn.culinarywonderland.com/photo/im/image0_l_663818.jpg",
+            "description": "Izgara kıyma kebabı, közlenmiş biber ve domates ile servis edilir."
+        },
+        {
+            "id": 4,
+            "name": "Lahmacun",
+            "price": 2.99,
+            "category": "Lahmacun",
+            "image": "https://cookingorgeous.com/wp-content/uploads/2021/11/homemade-turkish-lahmacun-recipe-26.jpg",
+            "description": "İncecik hamur, kıymalı harç ile taş fırında pişirilir."
+        },
+        {
+            "id": 5,
+            "name": "İskender Kebap",
+            "price": 12.99,
+            "category": "Kebap",
+            "image": "https://i.lezzet.com.tr/images-xxlarge-recipe/homemade-iskender-kebab-f33fcb75-16b0-46eb-b16c-c7d56512916d.jpg",
+            "description": "Tereyağı ve yoğurt ile sunulan döner kebap, özel iskender sosu ile."
         }
     ]
 }
