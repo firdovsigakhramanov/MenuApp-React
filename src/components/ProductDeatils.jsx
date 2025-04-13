@@ -7,7 +7,6 @@ import { useFoods } from '../context/MenuContext';
 
 function ProductDeatils() {
     const { setShowDetails, showDetails, foodDetails } = useFoods()
-    console.log(foodDetails)
     return (
         <div className={`flex justify-center items-center ${showDetails ? "" : "hidden"}`}>
             <div className='fixed top-0 left-0 right-0 bottom-0 z-100  bg-black opacity-90'>
