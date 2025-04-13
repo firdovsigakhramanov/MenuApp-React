@@ -1,10 +1,12 @@
 import Input from '../../components/Input'
-import React from 'react'
+import React, { useState } from 'react'
 import Select from '../../components/Select'
 import { FaImage } from "react-icons/fa6";
 import Button from '../../components/Button';
+import { useFoods } from '../../context/MenuContext';
 
 function NewProductForm() {
+    const { createProduct, setShowModal } = useFoods()
     const categories = [
         {
             id: 1,
@@ -19,13 +21,31 @@ function NewProductForm() {
             title: "Qazan yemekleri"
         }
     ]
+
+    const [productName, setProductName] = useState("")
+    const [price, setPrice] = useState("")
+    const [image, setImage] = useState("")
     const spanStyle = "mb-2 px-4 inline-block font-medium"
+
+    function handleClick(e) {
+        e.preventDefault()
+        const newProduct = {
+            "name": productName,
+            "price": price,
+            "category": "Pizza",
+            "image": image,
+            "description": "Domates sosu, mozzarella peyniri ve fesleğen ile hazırlanır."
+        }
+        createProduct(newProduct)
+        setShowModal(false)
+        alert("Yeni məhsul əlavə edildi.")
+    }
     return (
-        <form action="">
+        <form action="" onSubmit={handleClick}>
             <div className='flex flex-col gap-7'>
                 <div>
                     <span className={spanStyle}>Məhsulun adı:</span>
-                    <Input placeholder="Məhsulun adı" style="primary" />
+                    <Input data={productName} setData={setProductName} placeholder="Məhsulun adı" style="primary" />
                 </div>
                 <div>
                     <span className={spanStyle}>Məhsulun adı:</span>
@@ -33,7 +53,7 @@ function NewProductForm() {
                 </div>
                 <div>
                     <span className={spanStyle}>Məhsulun qiyməti (AZN):</span>
-                    <Input placeholder="Məhsulun qiyməti" style="primary" />
+                    <Input data={price} setData={setPrice} placeholder="Məhsulun qiyməti" style="primary" />
                 </div>
                 <div>
                     <span className={spanStyle}>Məhsulun təsviri:</span>
@@ -51,7 +71,7 @@ function NewProductForm() {
                             <span>Cihazdan yüklə</span>
                         </label>
                     </div>
-                    <Input placeholder="URL" style="primary" />
+                    <Input data={image} setData={setImage} placeholder="URL" style="primary" />
                     <label htmlFor='upLoadImg' className='flex items-center gap-2 cursor-pointer mt-3 text-orange-600'>
                         <FaImage />
                         <input id="upLoadImg" className='cursor-pointer' type="file" id="imageInput" accept="image/*" />

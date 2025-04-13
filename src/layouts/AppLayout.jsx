@@ -11,7 +11,6 @@ function AppLayout() {
             <Header />
             <Sidebar />
             <div className='bg-gray-100 pb-30'>
-                <Link to="dashboard" className='hidden'></Link>
                 <Outlet />
             </div>
             <Footer />

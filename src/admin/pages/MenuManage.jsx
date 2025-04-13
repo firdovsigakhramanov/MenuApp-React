@@ -7,8 +7,7 @@ import Modal from '../../layouts/Modal';
 import NewProductForm from '../components/NewProductForm';
 import { useFoods } from '../../context/MenuContext';
 function MenuManage() {
-  const [showModal, setShowModal] = useState(false)
-  const { foods } = useFoods()
+  const { foods, showModal, setShowModal } = useFoods()
   return (
     <div>
       {showModal &&

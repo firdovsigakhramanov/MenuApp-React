@@ -22,10 +22,23 @@ function MenuProvider({ children }) {
     const [showSidebar, setShowSidebar] = useState(false)
     const [showDetails, setShowDetails] = useState(false)
     const [foodDetails, setFoodDetails] = useState("")
+    const [showModal, setShowModal] = useState(false)
+
     useEffect(() => {
-        fetch(`${BASE_URL}/foods`)
-            .then((res) => res.json())
-            .then((data) => setFoods(data))
+        async function fetchFoods() {
+            try {
+                const res = await fetch(`${BASE_URL}/foods`)
+                const data = await res.json()
+                setFoods(data)
+            }
+            catch{
+                console.log("Menu yüklənərkən problem yarandı")
+            }
+        }
+        fetchFoods()
+        // fetch(`${BASE_URL}/foods`)
+        //     .then((res) => res.json())
+        //     .then((data) => setFoods(data))
     }, [])
 
     useEffect(() => {
@@ -40,10 +53,32 @@ function MenuProvider({ children }) {
             .then((data) => setCategory(data))
     }, [])
 
+
+    // const fetchData = (urlKey) => {
+    //     fetch(`${BASE_URL}/${urlKey}`)
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //         switch urlKey
+    //     }
+    // }
+
+    // create new product
+
+    async function createProduct(newProduct) {
+        const res = await fetch(`${BASE_URL}/foods`, {
+            method: 'POST',
+            body: JSON.stringify(newProduct),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+    }
+
     return <MenuContext.Provider value={{
         foods, category, users, showSidebar,
         setShowSidebar, showDetails, setShowDetails,
-        foodDetails, setFoodDetails
+        foodDetails, setFoodDetails, createProduct,
+        showModal, setShowModal
     }}>
         {children}
     </MenuContext.Provider>

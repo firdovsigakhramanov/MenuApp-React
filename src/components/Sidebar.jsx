@@ -4,6 +4,7 @@ import { IoClose } from "react-icons/io5";
 import NonFavorite from './NonFavorite';
 import FavoriteList from './FavoriteList';
 import { useFoods } from '../context/MenuContext';
+import { Link } from 'react-router-dom';
 
 
 function Sidebar() {
