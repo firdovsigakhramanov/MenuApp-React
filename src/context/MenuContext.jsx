@@ -30,6 +30,7 @@ function MenuProvider({ children }) {
                 const res = await fetch(`${BASE_URL}/foods`)
                 const data = await res.json()
                 setFoods(data)
+                console.log(data)
             }
             catch{
                 console.log("Menu yüklənərkən problem yarandı")
